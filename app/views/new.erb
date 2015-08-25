@@ -1,6 +1,38 @@
-<form action="/tasks" method="post">
-  <p>Enter a new task:</p>
-  <input type='text' name='task[title]'/><br/>
-  <textarea name='task[description]'></textarea><br/>
-  <input type='submit'/>
-</form>
+<!DOCTYPE html>
+<html lang ='en'>
+
+  <head>
+    <title>New Task</title>
+    <style>
+    #task_forms { background-color: orange; }
+    </style>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+  </head>
+
+  <body class='bg-primary'>
+    <div class='col-md-12 navbar navbar-static-top navbar-inverse'>
+      <a class='navbar-brand'><strong>New Task Form</strong></a>
+      <ul class='nav navbar-nav navbar-right'>
+        <li><a href = '/'>Task Manager</a></li>
+      </ul>
+    </div>
+
+    <div class='container'>
+      <div class='row well' id="task_forms">
+        <div class='col-md-6'>
+          <form action="/tasks" method="post">
+            <div class="form-group">
+              <label>Enter New Task</label>
+              <input type="text" class="form-control" name='task[title]' placeholder="New Task">
+            </div>
+            <div class="form-group">
+              <label>Enter Task Description</label>
+              <input type="text" class="form-control" name='task[description]' placeholder="Task Description">
+            </div>
+            <input type="submit" class="btn btn-info" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

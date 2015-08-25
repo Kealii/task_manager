@@ -1,5 +1,37 @@
-<h1>All Tasks</h1>
+<!DOCTYPE html>
+<html lang ='en'>
 
-<% @tasks.each do |task| %>
-  <h3><%= task.id %>: <a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
-<% end %>
+  <head>
+    <title>All Tasks</title>
+    <style>
+      #task_list{background-color: orange;}
+    </style>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+  </head>
+
+    <body class='bg-primary'>
+      <div class='col-md-12 navbar navbar-inverse navbar-static-top'>
+        <a class='navbar-brand'><strong>All Tasks</strong></a>
+        <ul class='nav navbar-nav navbar-right'>
+          <li><a href = '/'>Task Manager</a></li>
+        </ul>
+      </div>
+
+      <div class='container'>
+        <div class='row well' id='task_list'>
+          <div class='col-md-6'>
+            <ol style="font-weight: bold;">
+              <% @tasks.each do |task| %>
+              <li><a href="/tasks/<%= task.id %>"><%= task.title %></a></li>
+              <a href="/tasks/<%= task.id %>/edit">edit</a>
+              <% end %>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src='js/bootstrap.js'></script>
+  </body>
+</html

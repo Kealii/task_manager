@@ -1,5 +1,29 @@
-<a href="/tasks">Task Index</a>
+<!DOCTYPE html>
+<html lang ='en'>
 
-<h1><%= @task.title %></h1>
+  <head>
+    <title>All Tasks</title>
+    <style>
+      #task_description {background-color: orange;
+                         }
+    </style>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+  </head>
 
-<p><%= @task.description %></p>
+  <body class='bg-primary'>
+    <div class='col-md-12 navbar navbar-inverse navbar-static-top'>
+      <a class='navbar-brand'><strong><%= @task.title%></strong></a>
+      <ul class='nav navbar-nav navbar-right'>
+        <li><a href="/tasks">Task Index</a></li>
+      </ul>
+    </div>
+
+    <div class='container'>
+      <div class='row well' id='task_description'>
+        <div class='col-md-6'>
+            <p class='text-muted'><%= @task.description %></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

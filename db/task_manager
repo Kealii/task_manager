@@ -9,4 +9,7 @@ tasks:
 - id: 3
   title: Wake Up Elaine
   description: O_O
-total: 3
+- id: 4
+  title: Add New Button
+  description: Don't forget to test the button!
+total: 4
