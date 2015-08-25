@@ -1,15 +1,12 @@
 ---
 tasks:
 - id: 1
-  title: Testing
-  description: This should be working meow
+  title: Smoke Weed
+  description: Erryday
 - id: 2
   title: Another!
   description: Time to fill up that sched.
 - id: 3
   title: Wake Up Elaine
   description: O_O
-- id: 4
-  title: Add New Button
-  description: Don't forget to test the button!
 total: 4

@@ -1,7 +1,45 @@
-<form action="/tasks/<%= @task.id %>" method="post">
-  <p>Edit</p>
-  <input type="hidden" name="_method" value="PUT" />
-  <input type='text' name='task[title]' value="<%= @task.title %>"/><br/>
-  <textarea name='task[description]'><%= @task.description %></textarea><br/>
-  <input type='submit'/>
-</form>
+<!DOCTYPE html>
+<html lang ='en'>
+
+  <head>
+    <title>Edit Task</title>
+    <style>
+      #edit_tasks{background-color: orange;}
+    </style>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+  </head>
+
+    <body class='bg-primary'>
+      <div class='col-md-12 navbar navbar-inverse navbar-static-top'>
+        <a class='navbar-brand'><strong>Edit Task</strong></a>
+        <ul class='nav navbar-nav navbar-right'>
+          <li><a href = '/'>Task Manager</a></li>
+        </ul>
+      </div>
+
+      <div class='container'>
+        <div class='row well' id='edit_tasks'>
+          <div class='col-md-6'>
+            <ol style="font-weight: bold;">
+              <form action="/tasks/<%= @task.id %>" method="post">
+                <div class="form-group">
+                  <label>Enter New Task</lable>
+                  <input type="hidden" name="_method" value="PUT" />
+                  <input type='text' name='task[title]' class="form-control" value="<%= @task.title %>"/><br/>
+                </div>
+                <div class="form-group">
+                  <label>Enter New Task Description</label>
+                  <textarea name='task[description]' class="form-control"><%= @task.description %></textarea><br/>
+                </div>
+                <input type='submit' class="btn btn-info" value="Submit">
+              </form>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src='js/bootstrap.js'></script>
+  </body>
+</html>
