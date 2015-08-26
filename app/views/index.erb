@@ -1,11 +1,6 @@
-<!DOCTYPE html>
 <html lang ='en'>
-
   <head>
     <title>All Tasks</title>
-    <style>
-      #task_list{background-color: orange;}
-    </style>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
   </head>
 
@@ -18,15 +13,15 @@
       </div>
 
       <div class='container'>
-        <div class='row well' id='task_list'>
+        <div class='row well' id='container'>
           <div class='col-md-6'>
             <ol style="font-weight: bold;">
               <% @tasks.each do |task| %>
               <li><a href="/tasks/<%= task.id %>"><%= task.title %></a></li>
-              <a href="/tasks/<%= task.id %>/edit">Edit</a>
+              <a href="/tasks/<%= task.id %>/edit" class='btn btn-info'>Edit</a>
               <form action="/tasks/<%= task.id %>" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
-                <input type="submit" class='btn btn-info' value="delete"/>
+                <input type="submit" class='btn btn-danger' value="delete"/>
               </form>
               <% end %>
             </ol>

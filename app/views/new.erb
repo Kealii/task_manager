@@ -3,9 +3,6 @@
 
   <head>
     <title>New Task</title>
-    <style>
-    #task_forms { background-color: orange; }
-    </style>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
   </head>
 
@@ -16,9 +13,10 @@
         <li><a href = '/'>Task Manager</a></li>
       </ul>
     </div>
+    
 
     <div class='container'>
-      <div class='row well' id="task_forms">
+      <div class='row well' id="container">
         <div class='col-md-6'>
           <form action="/tasks" method="post">
             <div class="form-group">

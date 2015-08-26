@@ -1,15 +1,11 @@
-<!DOCTYPE html>
 <html lang ='en'>
-
   <head>
     <title>All Tasks</title>
     <style>
-      #task_description {background-color: orange;
-                         }
+      #task_description {background-color: orange;}
     </style>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
   </head>
-
   <body class='bg-primary'>
     <div class='col-md-12 navbar navbar-inverse navbar-static-top'>
       <a class='navbar-brand'><strong><%= @task.title%></strong></a>
@@ -17,7 +13,6 @@
         <li><a href="/tasks">Task Index</a></li>
       </ul>
     </div>
-
     <div class='container'>
       <div class='row well' id='task_description'>
         <div class='col-md-6'>

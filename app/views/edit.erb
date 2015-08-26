@@ -23,13 +23,13 @@
             <ol style="font-weight: bold;">
               <form action="/tasks/<%= @task.id %>" method="post">
                 <div class="form-group">
-                  <label>Enter New Task</lable>
+                  <label>Enter New Task</label>
                   <input type="hidden" name="_method" value="PUT" />
                   <input type='text' name='task[title]' class="form-control" value="<%= @task.title %>"/><br/>
                 </div>
                 <div class="form-group">
                   <label>Enter New Task Description</label>
-                  <textarea name='task[description]' class="form-control"><%= @task.description %></textarea><br/>
+                  <textarea name='task[description]' class="form-control"> <%= @task.description %></textarea><br/>
                 </div>
                 <input type='submit' class="btn btn-info" value="Submit">
               </form>

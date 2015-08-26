@@ -4,8 +4,8 @@ tasks:
   title: Smoke Weed
   description: Erryday
 - id: 2
-  title: Another!
-  description: Time to fill up that sched.
+  title: Another
+  description: Bowl
 - id: 3
   title: Wake Up Elaine
   description: O_O
