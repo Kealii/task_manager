@@ -17,6 +17,7 @@ class UserSeesAllTasksTest < FeatureTest
   end
 
   def test_user_can_edit_a_task
+    skip
     visit '/tasks/new'
     fill_in('task[title]', :with =>'Add Tests')
     fill_in('task[description]', :with =>'Good Coverage!')
@@ -27,6 +28,5 @@ class UserSeesAllTasksTest < FeatureTest
     click_button('Submit')
     assert_equal '/tasks/1', current_path
     assert page.has_content?('This test has been updated!')
-
   end
 end

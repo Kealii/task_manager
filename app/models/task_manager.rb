@@ -1,15 +1,12 @@
 require 'yaml/store'
 require 'sequel'
 
-
 class TaskManager
-  def self.database
-    @database ||= Sequel.sqlite("db/task_manager")
-  end
 
   def self.create(task)
     tasks = dataset
-    id = tasks.insert("title" => task[:title], "description" => task[:description])
+    id = tasks.insert("title"       => task[:title],
+                      "description" => task[:description])
     find(id)
   end
 
@@ -40,7 +37,8 @@ class TaskManager
   end
 
   def self.update(id, task)
-    dataset.where(id: id).update(title: task.title, description: task.description)
+    dataset.where(id: id).update(title:       task[:title],
+                                 description: task[:description])
   end
 
   def self.delete(id)

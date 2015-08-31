@@ -1,7 +1,7 @@
 class Task
   attr_accessor :title,
-              :description,
-              :id
+                :description,
+                :id
 
   def initialize(data)
     @id          = data[:id]
